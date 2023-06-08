@@ -1,0 +1,46 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Zeyada&display=swap');
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background:url('media/real\ paper.jpg');
+    background-size: 2000px;
+    font-family: 'Zeyada', cursive;
+    font-size:xx-large;
+    background-repeat: no-repeat;
+}
+.aunty{
+    max-height:500px;
+    max-width: 400px;
+    background: url('media/paper\ background.webp');
+    background-size: 500px;
+    background-repeat: no-repeat;
+    position: absolute;
+    overflow: hidden;
+    padding: 8px 20px;
+    /* text-align: center; */
+    transform: rotateZ(-5deg);
+}
+
+.aunty.heart{
+    position: relative;
+    width: 250px;
+    height: 250px;
+    background: url('media/heart.webp');
+    background-size: 150px;
+    transform: translateX(150px);
+    background-position:center;
+    background-repeat: no-repeat;
+    padding: 0;
+    border-radius: 50%;
+}
+
+.favourite{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
