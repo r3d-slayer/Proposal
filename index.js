@@ -18,7 +18,7 @@ class aunty{
 
 
     init(paper1){
-        paper1.addEventListener('mousedown',(e)=>{
+        paper1.addEventListener('touchmove',(e)=>{
             this.hold = true;
             paper1.style.zIndex = highest1;
             highest1 +=1;
@@ -32,7 +32,7 @@ class aunty{
             
         })
 
-        document.addEventListener('mousemove',(e)=>{
+        document.addEventListener('touchstart',(e)=>{
             this.MouseX = e.clientX;
             console.log(this.MouseX)
             this.MouseY = e.clientY;
@@ -53,7 +53,7 @@ class aunty{
 
         })
 
-        window.addEventListener('mouseup',(e)=>{
+        window.addEventListener('touchend',(e)=>{
             this.hold = false
         })
     }
