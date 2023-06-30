@@ -4,10 +4,10 @@ let div1 = document.body.getElementsByClassName('load1')[0];
 let audio = document.body.getElementsByClassName('audio')[0];
 
 div1.classList.add('load');
-const change = Array.from(div);
-change.forEach(element =>{
-    element.classList.add('hide1');
-})
+// const change = Array.from(div);
+// change.forEach(element =>{
+//     element.classList.add('hide1');
+// })
 bod.classList.add('hide');
 audio.classList.add('hide1');
 
