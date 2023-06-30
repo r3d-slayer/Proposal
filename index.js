@@ -1,11 +1,33 @@
+let bod = document.getElementsByTagName('body')[0];
+let div = document.body.querySelectorAll('.aunty');
+let div1 = document.body.getElementsByClassName('load1')[0];
+let audio = document.body.getElementsByClassName('audio')[0];
+
+div1.classList.add('load');
+const change = Array.from(div);
+change.forEach(element =>{
+    element.classList.add('hide1');
+})
+bod.classList.add('hide');
+audio.classList.add('hide1');
+
+window.addEventListener('load',(e)=>{
+    bod.classList.remove('hide');
+    change.forEach(element =>{
+        element.classList.remove('hide1');
+    })
+    div1.classList.add('hide1');
+    audio.classList.remove('hide1');
+
+})
+
 let highest1 = 1;
 
-let b1 = document.body.querySelectorAll('.aunty');
-console.log(b1);
+let b1 = document.body.getElementsByTagName('div');
+const b2 = document.body.querySelectorAll('.aunty');
+let aunt = document.getElementsByTagName('body')[0];
 
-
-
-class aunty{
+class aunty {
     hold = false;
     previousX = 0;
     previousY = 0
@@ -16,33 +38,28 @@ class aunty{
     velocityX = 0;
     velocityY = 0;
 
-
-    init(paper1){
-        paper1.addEventListener('touchmove',(e)=>{
+    init(paper1) {
+        paper1.addEventListener('mousedown', (e) => {
             this.hold = true;
             paper1.style.zIndex = highest1;
-            highest1 +=1;
-            console.log(this.hold);
-
-            if(e.button===0){
+            highest1 += 1;
+            if (e.button === 0) {
                 this.previousX = this.MouseX
                 this.previousY = this.MouseY
-                // console.log(this.previousX);
             }
-            
+
         })
 
-        document.addEventListener('touchstart',(e)=>{
+        document.addEventListener('mousemove', (e) => {
             this.MouseX = e.clientX;
-            console.log(this.MouseX)
             this.MouseY = e.clientY;
 
             this.velocityX = this.MouseX - this.previousX;
             this.velocityY = this.MouseY - this.previousY;
 
-            if(this.hold){
-                this.currentX+=this.velocityX;
-                this.currentY+=this.velocityY;
+            if (this.hold) {
+                this.currentX += this.velocityX;
+                this.currentY += this.velocityY;
 
                 this.previousX = this.MouseX;
                 this.previousY = this.MouseY;
@@ -50,10 +67,9 @@ class aunty{
                 paper1.style.transform = `translateX(${this.currentX}px) translateY(${this.currentY}px)`;
             }
 
-
         })
 
-        window.addEventListener('touchend',(e)=>{
+        window.addEventListener('mouseup', (e) => {
             this.hold = false
         })
     }
@@ -61,7 +77,7 @@ class aunty{
 
 
 const paper = Array.from(document.body.querySelectorAll('.aunty'));
-paper.forEach(paper1 =>{
+paper.forEach(paper1 => {
     const p = new aunty();
     p.init(paper1);
 })
