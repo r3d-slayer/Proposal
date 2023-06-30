@@ -6,7 +6,7 @@ body{
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background:url('media/real\ paper.jpg');
+    background: url('media/real\ paper.jpg');
     background-size: 2000px;
     font-family: 'Zeyada', cursive;
     font-size:xx-large;
@@ -21,7 +21,6 @@ body{
     position: absolute;
     overflow: hidden;
     padding: 8px 20px;
-    /* text-align: center; */
     transform: rotateZ(-5deg);
 }
 
@@ -29,7 +28,7 @@ body{
     position: relative;
     width: 250px;
     height: 250px;
-    background: url('media/heart.webp');
+    background:url('media/heart.webp');
     background-size: 150px;
     transform: translateX(150px);
     background-position:center;
@@ -44,3 +43,30 @@ body{
     align-items: center;
     flex-direction: column;
 }
+
+.blur-load{
+    display: none;
+}
+
+
+.hide{
+    background: none;
+}
+.hide1{
+    display: none;
+}
+.load{
+
+    border: 16px solid lightgray;
+    border-top: 16px solid blue;
+    width: 124px;
+    border-radius: 50%;
+    height: 124px;
+    animation: spin 2s linear infinite;
+}
+
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
