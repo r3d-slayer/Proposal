@@ -35,7 +35,7 @@ body{
     height: 250px;
     background:url('media/heart.webp');
     background-size: 150px;
-    transform: translateX(60px);
+    transform: translateX(150px);
     background-position:center;
     background-repeat: no-repeat;
     padding: 0;
@@ -67,16 +67,4 @@ body{
     border-radius: 50%;
     height: 124px;
     animation: spin 2s linear infinite;
-}
-
-
-.musicdisc{
-    width: 180px;
-    transform: translateX(200px);
-    height: 180px;
-    background: url(media/disc.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    animation: spin 2s linear infinite;
-    
 }
