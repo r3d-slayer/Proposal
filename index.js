@@ -2,7 +2,6 @@ let bod = document.getElementsByTagName('body')[0];
 let div = document.body.querySelectorAll('.aunty');
 let div1 = document.body.getElementsByClassName('load1')[0];
 let audio = document.body.getElementsByClassName('audio')[0];
-let disc = document.body.getElementsByClassName('musicdisc')[0];
 
 div1.classList.add('load');
 
@@ -18,8 +17,6 @@ window.addEventListener('load', (e) => {
     });
     div1.classList.add('hide1');
     audio.classList.remove('hide1');
-    disc.classList.remove('hide1');
-
 })
 
 
