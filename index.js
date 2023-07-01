@@ -2,24 +2,26 @@ let bod = document.getElementsByTagName('body')[0];
 let div = document.body.querySelectorAll('.aunty');
 let div1 = document.body.getElementsByClassName('load1')[0];
 let audio = document.body.getElementsByClassName('audio')[0];
+let disc = document.body.getElementsByClassName('musicdisc')[0];
 
 div1.classList.add('load');
+
 const change = Array.from(div);
-// change.forEach(element =>{
-//     element.classList.add('hide1');
-// })
 bod.classList.add('hide');
 audio.classList.add('hide1');
 
-window.addEventListener('load',(e)=>{
+
+window.addEventListener('load', (e) => {
     bod.classList.remove('hide');
-    change.forEach(element =>{
+    change.forEach((element) => {
         element.classList.remove('hide1');
-    })
+    });
     div1.classList.add('hide1');
     audio.classList.remove('hide1');
+    disc.classList.remove('hide1');
 
 })
+
 
 let highest1 = 1;
 
